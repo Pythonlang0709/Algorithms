@@ -1,0 +1,6 @@
+arr = [1,2,3,4,5]
+def alternate(arr):
+	for n,i in enumerate(arr):
+		if n%2==0:
+			print(i)
+alternate(arr)
