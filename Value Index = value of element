@@ -1,0 +1,10 @@
+arr = [1,2,4,5,7,6]
+def same(arr):
+	a = 1
+	solution = []
+	for i in arr:
+		if i==a:
+			solution.append(i)
+		a+=1
+	print(solution)
+same(arr)
