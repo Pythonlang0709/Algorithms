@@ -1,0 +1,10 @@
+t = int(input())
+for i in range(t):
+	s = input()
+	sor = sorted(s)
+	ans = ""
+	for i in sor:
+		ans = ans+i
+	print(ans)
+		
+		
