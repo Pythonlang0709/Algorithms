@@ -1,0 +1,13 @@
+def isequal(A,B,n):
+	#We will make function that will decide that       #is array set A and set B are equal or not 
+	a2 = set(A)
+	b2 = set(B)
+	z = a2.union(b2)
+	if len(z)==n:
+		print(True)
+	else:
+		print(False)
+#driver code
+arr = list(map(int,input().split()))
+arr1 = list(map(int,input().split()))
+isequal(arr,arr1,len(arr))
