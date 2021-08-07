@@ -1,0 +1,10 @@
+def minnum(arr):
+	add = sum(arr)
+	#here we will return 1 if the sum of the array      #is odd else we will return 2
+	if add%2==0:
+		print(2)
+	else:
+	        print(1)
+#drivers code
+arr = list(map(int,input().split()))
+minnum(arr)
