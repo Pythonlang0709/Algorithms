@@ -1,0 +1,5 @@
+def lowercase(S):
+      print(S.lower())
+#drivers code
+S = input("Enter a string")
+lowercase(S)
