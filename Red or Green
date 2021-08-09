@@ -1,0 +1,13 @@
+def redorgreen(s):
+	#we will count 5he number of r and g in              #string and then if number of r>half of the          #length of the string then we will retirn g             #else we will return r
+	half = len(s)/2
+	G = s.count("G")
+	R = s.count("R")
+	if R>half:
+		print(G)
+	else:
+		print(R)
+#drivers code
+String = input("Enter a string\n")
+redorgreen(String)
+	
