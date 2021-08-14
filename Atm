@@ -1,0 +1,5 @@
+x,y = map(float,input().split())
+if x>y-0.50 or x%5!=0:
+	print(y)
+else:
+	print(y-x-0.50)
