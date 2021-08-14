@@ -1,0 +1,10 @@
+t = int(input())
+for i in range(t):
+	e,k = map(int,input().split())
+	score = 0
+	while 1<=e:
+		e = e//k
+		score+=1
+	print(score)
+    
+	
