@@ -1,0 +1,8 @@
+t= int(input())
+for i in range(t):
+	n = int(input())
+	alist = list(map(int,input().split()))
+	a = min(alist)
+	alist.remove(a)
+	b = min(alist)
+	print(a+b)
