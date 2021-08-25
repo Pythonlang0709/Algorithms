@@ -1,0 +1,11 @@
+def kadanesalgorithm(arr):
+	curr_max = 0
+	subarray = arr[0]
+	for i in range(0,len(arr)):
+		curr_max = max(arr[i],curr_max+arr[i])
+		subarray = max(subarray,curr_max)
+		if curr_max<0:
+			curr_max=0
+		print(subarray,curr_max)
+kadanesalgorithm([-1,1,2,-1,4])
+	
