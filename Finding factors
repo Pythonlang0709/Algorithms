@@ -1,0 +1,15 @@
+def findfactor(n):
+	i = 1
+	factors = []
+	while i<=(n**0.5):
+		if n%i==0:
+			if i!=(n**0.5):
+				factors.append(i)
+				factors.append(n//i)
+			else:
+				factors.append(i)
+		i+=1
+	return sorted(factors)
+print(findfactor(25))
+				
+		
