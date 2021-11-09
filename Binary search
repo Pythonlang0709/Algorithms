@@ -1,0 +1,18 @@
+arr = [1,2,3,4,5,6,7,8,9,10]
+s = 0
+e = len(arr)-1
+ans = 0
+while s<=e:
+    mid = (s+e)//2
+    if arr[mid]==ans:
+        print("True",mid)
+        
+        break
+    elif arr[mid]>ans:
+        e = mid-1
+    else:
+        s = mid+1
+else:
+      print("False")
+      
+        
