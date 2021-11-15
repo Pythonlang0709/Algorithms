@@ -1,0 +1,14 @@
+stri = input()
+n = len(stri)
+def func(string):
+	stack = []
+	for k in string:
+		if k=="(":
+			stack.append(k)
+		elif len(stack)!=0 and stack[0]=="(":
+			stack.remove(stack[0])
+		else:
+			stack.append(k)
+	return ((len(stack)//2)+1)//2
+	    
+print(func(stri))
