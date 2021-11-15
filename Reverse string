@@ -1,0 +1,6 @@
+stack = []
+stri = "apple"
+for i in stri:
+    stack.append(i)
+print(*stack[::-1])
+    
