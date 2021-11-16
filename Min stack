@@ -1,0 +1,12 @@
+stack = []
+minstack = []
+items = [1,7,2,4,0]
+for i in items:
+    stack.append(i)
+    if len(minstack)==0:
+        minstack.append(i)
+    elif minstack[-1]>i:
+        minstack.append(i)
+print(minstack)
+        
+        
