@@ -1,0 +1,46 @@
+#p int((i-1)/2)
+#c 2*i+1
+class maxheap:
+    def __init__(self):
+        self.heap = []
+    def insert(self,element):
+       self.heap.append(element)
+       self.heapify(len(self.heap)-1)
+    def deletemax(self):
+       self.heap[0],self.heap[-1] = self.heap[-1],self.heap[0]
+       i = 0
+       while len(self.heap)>i:
+           if self.heap[i]>self.heap[2*i+1] and self.heap[i]>self.heap[2*i+2]:
+               break
+           elif self.heap[i]<self.heap[2*i+1]<self.heap[2*i+2]:
+               self.heap[i],self.heap[2*i+2] = self.heap[2*i+2],self.heap[i]
+           else:
+            self.heap[i],self.heap[2*i+1] = self.heap[2*i+1],self.heap[i]
+            
+              
+                   
+           
+           
+    def heapify(self,i):
+       while (i-1)//2>=0 and self.heap[(i-1)//2]<self.heap[i]:
+           self.heap[i],self.heap[(i-1)//2] = self.heap[(i-1)//2],self.heap[i]
+           i = (i-1)//2
+    def getmax(self):
+           print(self.heap[0])
+    def print(self):
+           print(self.heap)           
+heap = maxheap()
+heap.insert(8)           
+heap.print()
+heap.insert(9)
+heap.insert(1)
+heap.insert(2)
+heap.insert(10)
+heap.deletemax()
+heap.getmax()
+heap.print()
+
+           
+       
+       
+    
