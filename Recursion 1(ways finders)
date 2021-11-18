@@ -1,0 +1,10 @@
+def ways(x,n):
+    if x==n:
+        return 1
+    if x>n:
+        return 0
+    way1 = ways(x+1,n)
+    way2 = ways(x+2,n)
+    tways = way1+way2
+    return tways
+print(ways(0,4))
