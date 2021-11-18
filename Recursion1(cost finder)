@@ -1,0 +1,12 @@
+def ways(i,n,cost):
+    if i==n-1:
+        return cost[i]
+    pos = ways(i+1,n,cost)
+    if i+2<n:
+        pos = min(pos,ways(i+2,n,cost))
+    return pos+cost[i]    
+        
+cost = [1,2,3,4,5]
+c1 = ways(0,5,cost)
+c2 = ways(1,5,cost)
+print(min(c1,c2))
