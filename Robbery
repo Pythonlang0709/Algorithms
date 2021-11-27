@@ -1,0 +1,12 @@
+def rob(i,n,arr,dp):
+    if i>=n:
+        return 0
+    if dp[i]!=-1:
+        return dp[i]    
+    chori = arr[i]+rob(i+2,n,arr,dp)
+    notchori = rob(i+1,n,arr,dp)
+    dp[i]=max(chori,notchori)
+    return max(chori,notchori)
+arr = [1,4,5,3,3]
+dp = [-1]*(len(arr)+1)
+print(rob(0,len(arr),arr,dp))
