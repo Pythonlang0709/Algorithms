@@ -1,0 +1,19 @@
+def game(i,n,stones,dp):
+    if i>n:
+        return 0
+    if dp[i][n]!=-1:
+        return dp[i][n]    
+    case1 = stones[i]-game(i+1,n,stones,dp)
+    case2 = stones[n]-game(i,n-1,stones,dp)
+    dp[i][n] = max(case1,case2)
+    return max(case1,case2)
+stones = [1,2,4,2]
+n = len(stones)-1
+dp = [[-1]*len(stones)]*len(stones)
+
+ans = game(0,n,stones,dp)
+print(dp)
+if ans>0:
+    print("Alice won",ans)
+else:
+    print("Bob won")
