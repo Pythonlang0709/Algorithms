@@ -1,0 +1,8 @@
+cars = [6,6,6]
+cars = sorted(cars,reverse=True)
+prof = 0
+#i = 0
+for i in range(len(cars)):
+    prof+=max(0,(cars[i]-i))
+print(prof)    
+    
