@@ -1,0 +1,11 @@
+arr = [7,15,102,13]
+arr = sorted(arr)
+amin = float("inf")
+n = len(arr)
+i = 0
+while i<n-1:
+    cmin = abs(arr[i]-arr[i+1])
+    amin = min(cmin,amin)
+    i+=1
+print(amin)    
+    
