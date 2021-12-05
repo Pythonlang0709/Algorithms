@@ -1,0 +1,30 @@
+def add(scores):
+    x = scores[-1]
+    y = scores[-2]
+    scores.append(x+y)
+def double(scores):
+    x = scores[-1]
+    scores.append(x*2)
+def de(scores):
+    scores.pop()
+def push(scores,n):
+    scores.append(n)
+scores = [3,0,3,1]    
+add(scores)
+double(scores)
+de(scores)
+push(scores,4)
+double(scores)
+add(scores)
+
+A = 0
+B = 0
+print(scores)
+c = 0
+for i in scores:
+    if c%2==0:
+        A+=i
+    else:
+        B+=i 
+    c+=1
+print(A,B)           
