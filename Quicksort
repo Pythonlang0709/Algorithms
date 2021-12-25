@@ -1,0 +1,27 @@
+def quicksort(l,h,a):
+    if l<h:
+        ind = part(l,h,a)
+        quicksort(l,ind-1,a)
+        quicksort(ind+1,h,a)
+def part(l,h,a):
+    i = l+1
+    pivot = a[l]
+    j = h
+    while i<j:
+        while a[i]<=pivot and h>i:
+                print(a)
+                i+=1
+        while a[j]>pivot and j>=l:
+                print(a)
+                j-=1
+        if i<j:
+            a[i],a[j] = a[j],a[i]  
+    a[j],a[l] = a[l],a[j]
+    return j
+arr = [3,67,5,66,7,5,5,8,5,12]         
+print(arr)
+quicksort(0,len(arr)-1,arr)             
+print(arr) 
+                    
+                                     
+                         
